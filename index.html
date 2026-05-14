@@ -2,20 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>我的在线文档</title>
+  <title>我的技术文档</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- 默认的基础主题 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- 深色模式切换插件的专属样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
 </head>
 <body>
   <div id="app">文档加载中...</div>
   <script>
     window.$docsify = {
-      name: '我的知识库',
+      name: '软科态技术文档', // 您可以将其修改为合适的标题
       repo: '',
       loadSidebar: true,
-      subMaxLevel: 2
+      subMaxLevel: 2,
+      // 字数统计插件的配置参数
+      count:{
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      }
     }
   </script>
+  <!-- Docsify 核心脚本 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 字数统计插件脚本 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- 深色模式切换插件脚本 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
 </body>
 </html>
